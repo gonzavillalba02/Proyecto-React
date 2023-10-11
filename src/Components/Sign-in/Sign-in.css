@@ -1,0 +1,98 @@
+.sign-in-icono {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 3.5rem;
+    color: #6C3483;
+}
+
+
+.sign-in-container {
+    width: 25%;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.sign-in-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-form-inputspace {
+    margin: 30% 0 10% 0;
+}
+
+.sign-in-form-input {
+    width: 90%;
+    border: none;
+    border-radius: 8px;
+    background-color: #F2F4F4;
+    padding: 4% 5%;
+    margin: 6% 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.sign-in-form-button {
+    width: 100%;
+    margin: 28% 0 6% 0;
+    border: none;
+    border-radius: 10px;
+    padding: 4% 0;
+    background-color: #6C3483;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 120%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sign-redes {
+    margin: 6% 0;
+    padding-left: 22%;
+    display: flex;
+    width: 100%;
+}
+
+#sign-redes-div-instagram {
+    width: 40%;
+}
+
+#sign-redes-div-facebook {
+    width: 40%;
+}
+
+#sign-redes-div-twitter {
+    width: 40%;
+}
+
+.sign-in-regis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-regis p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5%;
+}
+
+.sign-in-regis button {
+    border: none;
+    background: none;
+    color: #6C3483;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 100%;
+    cursor: pointer;
+}
