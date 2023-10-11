@@ -57,15 +57,7 @@
 }
 
 .sign-in-form-input {
-    width: 90%;
-    border: none;
-    border-radius: 8px;
     background-color: #F2F4F4;
-    padding: 4% 5%;
-    margin: 6% 0;
-    font-family: 'Rubik', sans-serif;
-    font-size: 100%;
-    font-weight: 400;
 }
 
 
@@ -84,7 +76,7 @@
 }
 
 .sign-in-form-button:hover {
-    background-color: #a59ce3;
+    background-color: #7f6cdf;
     transition: 1s;
 }
 
@@ -130,6 +122,6 @@
 }
 
 .sign-in-regis button:hover {
-    color: #a59ce3;
+    color: #7f6cdf;
     transition: 1s;
 }

@@ -22,7 +22,7 @@
 }
 
 @keyframes logoCheck {
-    0%{
+    10%{
         transform: rotate(10deg);
     }
 

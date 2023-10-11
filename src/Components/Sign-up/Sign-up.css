@@ -31,18 +31,6 @@
     align-items: center;
 }
 
-.sign-up-form-input {
-    width: 90%;
-    border: none;
-    border-radius: 8px;
-    background-color: #F2F4F4;
-    padding: 4% 5%;
-    margin: 6% 0;
-    font-family: 'Rubik', sans-serif;
-    font-size: 100%;
-    font-weight: 400;
-}
-
 .sign-up-form-button {
     width: 100%;
     margin: 18% 0 6% 0;
@@ -58,7 +46,7 @@
 }
 
 .sign-up-form-button:hover {
-    background-color: #A59CE3;
+    background-color: #7f6cdf;
     transition: 1s;
 }
 
@@ -104,6 +92,6 @@
 }
 
 .sign-up-regis button:hover {
-    color: #A59CE3;
+    color: #7f6cdf;
     transition: 1s;
 }

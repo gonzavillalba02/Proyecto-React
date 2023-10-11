@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sign-in.css";
 import instagram from "../../assets/img/instagram-1.png"
 import facebook from "../../assets/img/facebook-1.png"
 import twitter from "../../assets/img/twitter-1.png"
 import logo from "../../assets/img/Icono.ico"
 //import {GiReceiveMoney} from "react-icons/gi"
+import TextField from '@mui/material/TextField';
 
 const Sign_in = ({HandleSign}) => {
+
+    const [userName, setUserName] = useState({value: "", valid: null})
+    const [pass, setPass] = useState({value: "", valid: null})
 
     return(
         <>
@@ -16,17 +20,33 @@ const Sign_in = ({HandleSign}) => {
                 <img src={logo} alt="Logo banco" className="sign-in-logo-banco"/>
                 <form className="sign-in-form">
                     <div className="sign-in-form-inputspace">
-                    <input type="text" 
+                    <TextField 
+                    type="text" 
                     className="sign-in-form-input"
-                    placeholder="Username"
+                    label="Username"
+                    color="secondary"
+                    margin="normal"
+                    fullWidth
+                    value={userName.value}
+                    onChange={(e)=>setUserName({value: e.target.value, valid: null})}
                     />
-                    <input type="password" 
+                    <TextField 
+                    type="password" 
                     className="sign-in-form-input"
-                    placeholder="Password"
+                    label="Password"
+                    color="secondary"
+                    margin="normal"
+                    fullWidth
+                    value={pass.value}
+                    onChange={(e)=> setPass({value: e.target.value, valid:null})}
                     />
                     </div>
 
                     <button 
+                    onClick={(e) => {
+                        e.preventDefault()
+                        console.log(userName.value, " ", pass.value)
+                    }}
                     className="sign-in-form-button"
                     >
                         Log in
@@ -58,7 +78,9 @@ const Sign_in = ({HandleSign}) => {
                 <div className="sign-in-regis">
                     <p>You don't have an account?</p>
                     <button
-                    onClick={()=>{HandleSign(1)}}
+                    onClick={ () => {
+                        HandleSign(1)
+                    }}
                     >Sign up</button>
                 </div>
             </div>
