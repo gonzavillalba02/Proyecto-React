@@ -1,0 +1,54 @@
+.sign-completed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 27%;
+    margin-top: 2%;
+}
+
+.sign-completed-container h3 {
+    color: #6C3483;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 4%;
+}
+
+.sign-completed-container img {
+    width: 80%;
+    margin: 10% 0;
+}
+
+.sign-completed-button {
+    margin-top: 5%;
+    padding: 3%;
+    width: 80%;
+    border-radius: 0.5rem;
+    border: 2px solid #6C3483;
+    background: none;
+    color: #6C3483;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 130%;
+    cursor: pointer;
+}
+
+.sign-redes-completed {
+    margin: 6% 0;
+    padding-left: 22%;
+    display: flex;
+    width: 85%;
+}
+
+#sign-redes-div-instagram {
+    width: 40%;
+}
+
+#sign-redes-div-facebook {
+    width: 40%;
+}
+
+#sign-redes-div-twitter {
+    width: 40%;
+}
