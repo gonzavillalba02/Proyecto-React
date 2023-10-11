@@ -1,10 +1,10 @@
-.sign-up-icono {
+/*.sign-up-icono {
     position: absolute;
     top: 3%;
     right: 3%;
     font-size: 3.5rem;
     color: #6C3483;
-}
+}*/
 
 .sign-up-container {
     width: 25%;
@@ -16,6 +16,12 @@
     align-items: center;
     justify-content: center;
     padding: 0 5%;
+}
+
+.sign-up-logo-banco {
+    width: 25%;
+    margin-bottom: 6%;
+    animation: latir 60s infinite; /*Esta en Sign-in.css */
 }
 
 .sign-up-form {
@@ -49,6 +55,11 @@
     font-size: 120%;
     font-weight: 500;
     cursor: pointer;
+}
+
+.sign-up-form-button:hover {
+    background-color: #A59CE3;
+    transition: 1s;
 }
 
 .sign-redes {
@@ -90,4 +101,9 @@
     font-weight: 600;
     font-size: 100%;
     cursor: pointer;
+}
+
+.sign-up-regis button:hover {
+    color: #A59CE3;
+    transition: 1s;
 }

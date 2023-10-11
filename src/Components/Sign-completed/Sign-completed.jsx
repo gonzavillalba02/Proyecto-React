@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sign-completed.css"
-import completed from "../../assets/img/sign-completed-1.png"
+import completed from "../../assets/img/sign-completed.png"
 import instagram from "../../assets/img/instagram-1.png"
 import facebook from "../../assets/img/facebook-1.png"
 import twitter from "../../assets/img/twitter-1.png"
@@ -9,7 +9,7 @@ const Sign_completed = ({HandleSign}) => {
     return(
         <div className="sign-completed-container">
             <h3>Registration completed !</h3>
-            <img src={completed} alt="Registro completado" />
+            <img src={completed} alt="Registro completado" className="sign-completed-logo-check"/>
             <button 
             className="sign-completed-button"
             onClick={()=>{HandleSign(0)}}

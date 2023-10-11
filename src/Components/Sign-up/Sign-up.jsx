@@ -1,9 +1,10 @@
 import React from "react";
 import "./Sign-up.css";
-import {GiPayMoney} from "react-icons/gi";
+//import {GiPayMoney} from "react-icons/gi";
 import instagram from "../../assets/img/instagram-1.png"
 import facebook from "../../assets/img/facebook-1.png"
 import twitter from "../../assets/img/twitter-1.png"
+import logo from "../../assets/img/Icono.ico"
 
 const Sign_up = ({HandleSign}) => {
 
@@ -14,9 +15,10 @@ const Sign_up = ({HandleSign}) => {
 
     return(
         <>
-        <GiPayMoney className="sign-up-icono"/>
+        {/*<GiPayMoney className="sign-up-icono"/> Icono de mano */}
         <div className="sign-up-container">
             <div className="sign-up">
+                <img src={logo} alt="Logo Banco" className="sign-up-logo-banco"/>
             <form className="sign-up-form">
                 <input 
                 type="text" 
@@ -70,11 +72,11 @@ const Sign_up = ({HandleSign}) => {
                 </a>
             </div>
             <div className="sign-up-regis">
-                <p>Ya tienes una cuenta?</p>
+                <p>Do you have an account?</p>
                 <button
                 onClick={()=>{HandleSign(0)}}
                 >
-                    Inicia sesión
+                    Sign in
                 </button>
             </div>
             </div>

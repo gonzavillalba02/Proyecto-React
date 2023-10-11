@@ -3,15 +3,17 @@ import "./Sign-in.css";
 import instagram from "../../assets/img/instagram-1.png"
 import facebook from "../../assets/img/facebook-1.png"
 import twitter from "../../assets/img/twitter-1.png"
-import {GiReceiveMoney} from "react-icons/gi"
+import logo from "../../assets/img/Icono.ico"
+//import {GiReceiveMoney} from "react-icons/gi"
 
 const Sign_in = ({HandleSign}) => {
 
     return(
         <>
-        <GiReceiveMoney className="sign-in-icono"/>
+        {/*<GiReceiveMoney className="sign-in-icono"/>*/}
         <div className="sign-in-container">
             <div className="sign-in">
+                <img src={logo} alt="Logo banco" className="sign-in-logo-banco"/>
                 <form className="sign-in-form">
                     <div className="sign-in-form-inputspace">
                     <input type="text" 
@@ -54,10 +56,10 @@ const Sign_in = ({HandleSign}) => {
                     </a>
                 </div>
                 <div className="sign-in-regis">
-                    <p>No tienes una cuenta?</p>
+                    <p>You don't have an account?</p>
                     <button
                     onClick={()=>{HandleSign(1)}}
-                    >Regístrate</button>
+                    >Sign up</button>
                 </div>
             </div>
         </div>

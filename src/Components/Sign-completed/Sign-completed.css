@@ -15,9 +15,32 @@
     margin-bottom: 4%;
 }
 
-.sign-completed-container img {
-    width: 80%;
-    margin: 10% 0;
+.sign-completed-logo-check {
+    width: 50%;
+    margin: 17% 0;
+    animation: logoCheck 5s infinite;
+}
+
+@keyframes logoCheck {
+    0%{
+        transform: rotate(10deg);
+    }
+
+    30%{
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    50%{
+        transform: scale(0.95) rotate(5deg);
+    }
+
+    70%{
+        transform: rotate(-5deg);
+    }
+
+    100%{
+        transform: rotate(10deg);
+    }
 }
 
 .sign-completed-button {
