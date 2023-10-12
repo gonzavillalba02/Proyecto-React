@@ -1,3 +1,11 @@
+:root {
+    --color-principal: #6C3483;
+    --color-secundario: #7F6CDF;
+    --color-terceario: #F2F4F4;
+    --color-cuarto: #A569BD;
+}
+
+
 .dom {
     height: 100vh;
 }

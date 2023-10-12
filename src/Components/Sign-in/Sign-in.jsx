@@ -6,11 +6,13 @@ import twitter from "../../assets/img/twitter-1.png"
 import logo from "../../assets/img/Icono.ico"
 //import {GiReceiveMoney} from "react-icons/gi"
 import TextField from '@mui/material/TextField';
+import {PiEyeClosedLight, PiEyeLight} from "react-icons/pi"
 
 const Sign_in = ({HandleSign}) => {
 
     const [userName, setUserName] = useState({value: "", valid: null})
     const [pass, setPass] = useState({value: "", valid: null})
+    const [eye, setEye] = useState(true) //true -> password / ojo cerrado
 
     return(
         <>
@@ -20,6 +22,7 @@ const Sign_in = ({HandleSign}) => {
                 <img src={logo} alt="Logo banco" className="sign-in-logo-banco"/>
                 <form className="sign-in-form">
                     <div className="sign-in-form-inputspace">
+
                     <TextField 
                     type="text" 
                     className="sign-in-form-input"
@@ -30,8 +33,20 @@ const Sign_in = ({HandleSign}) => {
                     value={userName.value}
                     onChange={(e)=>setUserName({value: e.target.value, valid: null})}
                     />
+
+                    {eye === true ? 
+                    <PiEyeClosedLight 
+                    className="sign-in-eye"
+                    onClick={() => setEye(false)}
+                    />
+                     : 
+                    <PiEyeLight 
+                    className="sign-in-eye"
+                    onClick={() => setEye(true)}
+                    />}
+
                     <TextField 
-                    type="password" 
+                    type={eye === true ? "password" : "text"} 
                     className="sign-in-form-input"
                     label="Password"
                     color="secondary"
