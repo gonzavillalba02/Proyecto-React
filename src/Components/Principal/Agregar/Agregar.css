@@ -1,0 +1,22 @@
+.agregar-container {
+    padding: 4rem 4rem;
+}
+
+.agregar-container-date {
+    width: 89.5%;
+    margin-top: 1rem;
+    padding: 1rem 5%;
+    background-color: var(--color-terceario);
+    border: 1px solid #B2BABB;
+    border-radius: .3rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: .9rem;
+    color: #7F8C8D;
+}
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background-color: var(--color-cuarto);
+    border-radius: .3rem;
+    padding: .3rem;
+}

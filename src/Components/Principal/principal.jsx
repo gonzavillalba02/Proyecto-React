@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./principal.css"
-import {IoRestaurant} from "react-icons/io5"
-import {BiSolidCarCrash} from "react-icons/bi"
-import {FaUserDoctor} from "react-icons/fa6"
 import logo from "../../assets/img/Icono - copia.png"
 import user from "../../assets/img/user.png"
-import chancho from "../../assets/img/chancho.png"
+import chancho from "../../assets/img/chancho.svg"
 import plus from "../../assets/img/plus.png"
-import dashboard from "../../assets/img/dashboard.png"
 import {PiEyeClosedLight, PiEyeLight} from "react-icons/pi"
+import Sinmovements from "./Sin Movimientos/sinmovements";
+import Cards from "./Cards/Cards";
+import Agregar from "./Agregar/Agregar";
 
 
 const Principal = () => {
+
+    const [eye, setEye] = useState(true)
+    const [cardStep, setCardStep] = useState(0) //esto es temporal cuando agregue la base de datos esto voy a cmabiar por que verifique que la lista este vacia o si teiene algo o etc
+
+    const actualizarCardStep = () => {
+        setCardStep(!cardStep)
+    }
+
     return(
         <div className="principal">
         <nav className="principal-nav">
@@ -31,21 +38,42 @@ const Principal = () => {
                     <h3 className="principal-container-1-info-titulo">Saldo Disponible</h3>
                     <div className="principal-container-1-info-plata">
                         <p className="principal-container-1-info-plata-signo">$</p>
-                        <p className="principal-container-1-info-plata-numeros">606.747</p>
-                        <PiEyeLight className="principal-container-1-info-plata-eye"/>
+                        <p className="principal-container-1-info-plata-numeros">
+                            {eye === true ? 606.747 : "********"}
+                        </p>
+                        {eye === true ? 
+                        <PiEyeLight 
+                        onClick={() => setEye(false)}
+                        className="principal-container-1-info-plata-eye"
+                        /> : 
+                        <PiEyeClosedLight 
+                        onClick={() => setEye(true)}
+                        className="principal-container-1-info-plata-eye"
+                        />}
                     </div>
                 </div>
                 <img src={chancho} alt="Imagen" />
             </div>
             <div className="principal-container-2">
-                <div className="principal-container-2-div">
+                <div 
+                className="principal-container-2-div"
+                >
                     <div className="principal-container-2-div-cards">
-                        <p>Sin movimientos...</p>
-                        <img src={dashboard} alt="Sin movimientos" />
+                        {cardStep === 0 ? <Sinmovements /> 
+                        : (cardStep === true ? <Cards /> : <Agregar />)}
                     </div>
                     <div className="principal-container-2-botones">
                         <button className="principal-container-2-botones-vermas">Ver más</button>
-                        <button className="principal-container-2-botones-plus-button"><img className="principal-container-2-botones-plus-img" src={plus} alt="Agregar" /></button>
+                        <button 
+                        className="principal-container-2-botones-plus-button"
+                        onClick={actualizarCardStep}
+                        >
+                            <img 
+                            className="principal-container-2-botones-plus-img" 
+                            src={plus} 
+                            alt="Agregar" 
+                            />
+                        </button>
                     </div>
                 </div>
             </div>
