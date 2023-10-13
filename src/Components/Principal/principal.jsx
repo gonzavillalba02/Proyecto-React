@@ -53,6 +53,7 @@ const Principal = () => {
                     </div>
                 </div>
                 <img src={chancho} alt="Imagen" />
+                <p className="principal-container-1-marca">© Desarrollado por Gonzalo Emiliano Villalba</p>
             </div>
             <div className="principal-container-2">
                 <div 
