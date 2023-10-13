@@ -8,7 +8,7 @@ import logo from "../../assets/img/Icono.ico"
 import TextField from '@mui/material/TextField';
 import {PiEyeClosedLight, PiEyeLight} from "react-icons/pi"
 
-const Sign_in = ({HandleSign}) => {
+const Sign_in = ({HandleSign, handleStep}) => {
 
     const [userName, setUserName] = useState({value: "", valid: null})
     const [pass, setPass] = useState({value: "", valid: null})
@@ -60,7 +60,7 @@ const Sign_in = ({HandleSign}) => {
                     <button 
                     onClick={(e) => {
                         e.preventDefault()
-                        console.log(userName.value, " ", pass.value)
+                        handleStep(0)
                     }}
                     className="sign-in-form-button"
                     >

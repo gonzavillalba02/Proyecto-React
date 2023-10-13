@@ -14,7 +14,7 @@ const Sign = ({handleStep}) => {
 
     return (
         <div className="dom-sign">
-                {sign===0 && <Sign_in HandleSign={HandleSign}/>}
+                {sign===0 && <Sign_in handleStep={handleStep} HandleSign={HandleSign}/>}
                 {sign===1 && <Sign_up HandleSign={HandleSign}/>}
                 {sign===2 && <Sign_completed HandleSign={HandleSign}/>}
         </div>
